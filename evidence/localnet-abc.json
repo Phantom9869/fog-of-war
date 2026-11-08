@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-11-08T08:51:45.192Z",
+  "cluster": "http://127.0.0.1:8899",
+  "clusterKind": "localnet",
+  "explorer": null,
+  "note": "These signatures exist only on this local validator. They are not devnet or mainnet explorer records. Query the same RPC while that validator process is still running. A simulation rejection has no signature.",
+  "programId": "4XURPrqz52o1axwAdhY9uLRHXXZ2twXgecFFvjrTCvo3",
+  "wallet": "none. Ephemeral keypairs lived in this process and were not written to disk.",
+  "demos": {
+    "A": {
+      "what": "Both seats commit and reveal. Turn 1 closes distance. Turn 2 west strikes the square east steps onto.",
+      "match": "4QnJh2U6jgFvaBbYJS4svNnYQPkQrqDz7PNRMbGUL6jj",
+      "steps": [
+        {
+          "label": "A init",
+          "signature": "2oTy7NaLqutmayVFG87Sp3d6TRceV2FojifnNN6cZjPHg1quxaqq2fRxJVPpJUfq4oVMXS4RdCAq5aHV1JXpe6jM",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A commit advance east",
+          "signature": "4xpnYtQcutQCEdHYA3kisuswdMVRvLsa8xvznwKBKyG1z8N9MoLYubU5sbzrRNg9o55NEvUeZVjV8TafrZtMkg1w",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A commit advance west",
+          "signature": "2VtMS1D8fC4uLHb9t61xLGqrSx2DHp5J29bk7ggtmwxC41r38dok5zytAUP9ScX2pnrzaeoWkwcV8XGxhoAjALdG",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A reveal advance east",
+          "signature": "qjGXag6vwp5JWbX3sXTT4VyiF2JR387gT2USvK1ytz9Z1VNmzC6junaGzzdmR6bobSTs244HeowZTEW3N6Vj1QW",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A reveal advance west",
+          "signature": "52KhJenEBUdReQ64tf7T5yyPVrn1yP98qtwhkwe3RJpinEAW8LRbG19C1YBrEX1FWPw4WdNbXNm7KzS3wtxnDTxS",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A commit strike east",
+          "signature": "4RwGkD9W4KuJPWXePnVT1cCaevdYTauCg4bsL4t6QAiQqsz2k83JHdG5DSFRZJjZxLb1xhFq1aS2uDMU3DtN9zxQ",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A commit step west",
+          "signature": "2ve13mcpCMmbx5gFzqXRRHER3BfVA4YR7Z7xkBv5tFWeD9jtji5iifHrgqWE7W22PoqqVWM8Pt8NDQ8jfrAheSV4",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A reveal strike",
+          "signature": "3pR8mwctgb85HU2BsurFFpX1m3zU8YsWRN1vAstd7rRJ2L3EG3Zu43qDg2V2bV3jFBnekmaESBA4UcASyQbF8tNV",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "A reveal step",
+          "signature": "JjWxJBzyfv3stML2aur7nhGiKGQBHnqhmeK1N8eHwrUp91BUyvgD1Zq9o4NVXHHw6cscCqmeaock2zcxTBvZzwz",
+          "stage": "confirmed",
+          "error": null
+        }
+      ],
+      "observed": {
+        "posA": 11,
+        "posB": 12,
+        "hpA": 3,
+        "hpB": 2,
+        "flags": 32,
+        "phase": 0
+      }
+    },
+    "B": {
+      "what": "West commits, then submits a different order. The program rejects it and the stored hash stays.",
+      "match": "EdinMv2b3HJJKkDDwJdfAgFVM6a7P5kU7PVtaPHQsCuM",
+      "steps": [
+        {
+          "label": "B init",
+          "signature": "5arARLRCfVZQEjFv3fqZzFGjpQfdew7sLdFgZ2HNQMtCuCBQhmX7wUvyGqH2Fg5AAvrkNN9dRcwKoeJNaeCC16qW",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "B first commit",
+          "signature": "64M46pHz14EMwgkqGJNH1rthxTtgqss7aTTB1RMP8ePsdaqqY8LaANCrqpDWeYZwwPr4LFrDeU8Lf4eGaE2aaWUz",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "B second commit",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x2"
+        }
+      ],
+      "hashBefore": "ce2a6ad3968a19c3a8e527a148969ba81c6083756e02a6a6fd6650c945a21555",
+      "hashAfter": "ce2a6ad3968a19c3a8e527a148969ba81c6083756e02a6a6fd6650c945a21555",
+      "phase": 0
+    },
+    "C": {
+      "what": "Both commit. Only west reveals. Timeout before the deadline is rejected. After the reveal deadline, west wins by forfeit. No damage is invented.",
+      "match": "6sXh4bLVKouVDkzK1b3rihycxxTz4KYKVTJeRjiNUvXW",
+      "steps": [
+        {
+          "label": "C init",
+          "signature": "2CKE5orpqFUzEJaYtHvmU3yC2qtcVQQR5y2PWSy9R9NVxGiz7YYZNTMDahgQ4PLF5U7amUbns66Wb1oyR1s9fYgZ",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "C west commit",
+          "signature": "36i155o9TsWaT2QoFcRrJivycX5Gp5PWP4sX6eE1EjTcRdcAnW4own1BvD13PDLBdsEsyj4rsnAzuXLjpohLpXwB",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "C east commit",
+          "signature": "4xGHnSfHaUwEWLAKSzVjL3i35uxaWYL3EtgtToCJjymXAkk7pqVywRFDrCHyrGqKo6VRQvRg2p3w7vMG5uZAuE7p",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "C timeout before deadline",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C west reveal",
+          "signature": "2f3VjwGoS56KxtrqTySHWVLBkPjAx4KcHwBJkE4pveWs74yydguQj2pRvJTzqXT8uf6ys8KLnWUMXDDu5CkKfppM",
+          "stage": "confirmed",
+          "error": null
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": null,
+          "stage": "simulation-rejected",
+          "error": "0x6"
+        },
+        {
+          "label": "C reveal timeout",
+          "signature": "jKyWuRqXNffGb9to7WCNWbTuYyYRRxT9aZB8rdeLeoqnvedY4cu1m8wUUPJaSWyb2qBHzfGP9KZM26WS9xEMg4N",
+          "stage": "confirmed",
+          "error": null
+        }
+      ],
+      "observed": {
+        "winner": 1,
+        "phase": 2,
+        "flags": 4096,
+        "posA": 10,
+        "posB": 14,
+        "damageA": 0,
+        "damageB": 0
+      }
+    }
+  }
+}

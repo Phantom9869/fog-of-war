@@ -1,0 +1,38 @@
+{
+  "name": "fog-of-war",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0 --port 3847",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0 --port 3847",
+    "lint": "eslint",
+    "bot": "tsx bot/server.ts",
+    "test:ts": "tsx --test tests/*.test.ts",
+    "test:program": "cargo test --manifest-path program/Cargo.toml",
+    "smoke:local": "tsx scripts/smoke-local.ts",
+    "demo:local": "tsx scripts/demo-abc.ts",
+    "localnet": "bash scripts/localnet.sh",
+    "assets": "node scripts/build-pixel-assets.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "@solana/web3.js": "^1.98.4",
+    "buffer": "^6.0.3",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "pngjs": "^7.0.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,29 @@
+[package]
+name = "fog-of-war"
+version = "0.1.0"
+edition = "2021"
+description = "Fog of War simultaneous-turn commitment arena"
+license = "MIT"
+publish = false
+
+[lib]
+name = "fog_of_war"
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = []
+default = []
+
+[dependencies]
+solana-program = "=3.0.0"
+solana-system-interface = { version = "=3.1.0", features = ["bincode"] }
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+solana-instruction = "=3.2.0"
+solana-keypair = "=3.1.0"
+solana-program-test = { version = "=4.0.0", features = ["agave-unstable-api"] }
+solana-signer = "=3.0.0"
+solana-transaction = "=3.1.0"
+tokio = { version = "1", features = ["full"] }
