@@ -43,7 +43,12 @@ next-env.d.ts
 # Fog of War local secrets and generated chain artifacts
 /program/target
 /.localnet
+/test-ledger
 /bot/.bot-keypair.json
 /bot/.seals.json
 /public/program.json
 **/*-keypair.json
+devnet-payer.json
+id.json
+*.so
+
